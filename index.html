@@ -1,0 +1,610 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+        <meta name="description" content="Rillgen2D Docs">
+      
+      
+      
+        <meta name="author" content="Jon D Pelletier, Jacob van der Leeuw, Tyson L Swetnam">
+      
+      
+        <link rel="canonical" href="https://github.com/jdpellet/rillgen2d/">
+      
+      <link rel="icon" href="assets/favicon.png">
+      <meta name="generator" content="mkdocs-1.2.2, mkdocs-material-7.2.6">
+    
+    
+      
+        <title>Rillgen2d</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.802231af.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.3f5d1f46.min.css">
+        
+          
+          
+          <meta name="theme-color" content="#2094f3">
+        
+      
+    
+    
+    
+      
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Google+Sans:300,400,400i,700%7CRegular&display=fallback">
+        <style>:root{--md-text-font-family:"Google Sans";--md-code-font-family:"Regular"}</style>
+      
+    
+    
+    
+    
+      
+
+
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="blue" data-md-color-accent="pink">
+  
+    
+    <script>function __prefix(e){return new URL(".",location).pathname+"."+e}function __get(e,t=localStorage){return JSON.parse(t.getItem(__prefix(e)))}</script>
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#rillgen2d" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+      <header class="md-header" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Rillgen2d" class="md-header__button md-logo" aria-label="Rillgen2d" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3V6m0 5h18v2H3v-2m0 5h18v2H3v-2z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Rillgen2d
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Introduction
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+    
+    
+      <label class="md-header__button md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+      </label>
+      
+<div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.516 6.516 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5z"/></svg>
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11h12z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" aria-label="Clear" tabindex="-1">
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12 19 6.41z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+    
+    
+      <div class="md-header__source">
+        
+<a href="https://github.com/jdpellet/rillgen2d/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    rillgen2d
+  </div>
+</a>
+      </div>
+    
+  </nav>
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Rillgen2d" class="md-nav__button md-logo" aria-label="Rillgen2d" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 89 89">
+  <path d="M3.136,17.387l0,42.932l42.932,21.467l-42.932,-64.399Z" />
+  <path d="M21.91,8l42.933,64.398l-18.775,9.388l-42.932,-64.399l18.774,-9.387Z" style="fill-opacity: 0.5" />
+  <path d="M67.535,17.387l-27.262,18.156l21.878,32.818l5.384,2.691l0,-53.665Z" />
+  <path d="M67.535,17.387l0,53.666l18.774,-9.388l0,-53.665l-18.774,9.387Z" style="fill-opacity: 0.25" />
+</svg>
+
+    </a>
+    Rillgen2d
+  </label>
+  
+    <div class="md-nav__source">
+      
+<a href="https://github.com/jdpellet/rillgen2d/" title="Go to repository" class="md-source" data-md-component="source">
+  <div class="md-source__icon md-icon">
+    
+    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"><path d="M439.55 236.05 244 40.45a28.87 28.87 0 0 0-40.81 0l-40.66 40.63 51.52 51.52c27.06-9.14 52.68 16.77 43.39 43.68l49.66 49.66c34.23-11.8 61.18 31 35.47 56.69-26.49 26.49-70.21-2.87-56-37.34L240.22 199v121.85c25.3 12.54 22.26 41.85 9.08 55a34.34 34.34 0 0 1-48.55 0c-17.57-17.6-11.07-46.91 11.25-56v-123c-20.8-8.51-24.6-30.74-18.64-45L142.57 101 8.45 235.14a28.86 28.86 0 0 0 0 40.81l195.61 195.6a28.86 28.86 0 0 0 40.8 0l194.69-194.69a28.86 28.86 0 0 0 0-40.81z"/></svg>
+  </div>
+  <div class="md-source__repository">
+    rillgen2d
+  </div>
+</a>
+    </div>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+      
+
+  
+  
+    
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" data-md-toggle="toc" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          Introduction
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        Introduction
+      </a>
+      
+        
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="data/" class="md-nav__link">
+        Data
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="docker/" class="md-nav__link">
+        Docker
+      </a>
+    </li>
+  
+
+    
+      
+      
+      
+
+  
+  
+  
+    
+    <li class="md-nav__item md-nav__item--nested">
+      
+      
+        <input class="md-nav__toggle md-toggle" data-md-toggle="__nav_4" type="checkbox" id="__nav_4" >
+      
+      <label class="md-nav__link" for="__nav_4">
+        Codebase
+        <span class="md-nav__icon md-icon"></span>
+      </label>
+      <nav class="md-nav" aria-label="Codebase" data-md-level="1">
+        <label class="md-nav__title" for="__nav_4">
+          <span class="md-nav__icon md-icon"></span>
+          Codebase
+        </label>
+        <ul class="md-nav__list" data-md-scrollfix>
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="python/" class="md-nav__link">
+        Python
+      </a>
+    </li>
+  
+
+          
+            
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="c/" class="md-nav__link">
+        C
+      </a>
+    </li>
+  
+
+          
+        </ul>
+      </nav>
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#contents" class="md-nav__link">
+    Contents
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          <div class="md-content" data-md-component="content">
+            <article class="md-content__inner md-typeset">
+              
+                
+                  <a href="https://github.com/jdpellet/rillgen2d/edit/master/docs/index.md" title="Edit this page" class="md-content__button md-icon">
+                    <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20.71 7.04c.39-.39.39-1.04 0-1.41l-2.34-2.34c-.37-.39-1.02-.39-1.41 0l-1.84 1.83 3.75 3.75M3 17.25V21h3.75L17.81 9.93l-3.75-3.75L3 17.25z"/></svg>
+                  </a>
+                
+                
+                <p><a href="https://www.repostatus.org/#wip"><img alt="Project Status: WIP – Initial development is in progress, but there has not yet been a stable, usable release suitable for the public." src="https://www.repostatus.org/badges/latest/wip.svg" /></a> <a href="https://opensource.org/licenses/GPL-3.0"><img alt="license" src="https://img.shields.io/badge/license-GPLv3-blue.svg" /></a> </p>
+<h1 id="rillgen2d">rillgen2d<a class="headerlink" href="#rillgen2d" title="Permanent link">&para;</a></h1>
+<p>Code, example data, and manuscript supplemental materials which accompany <strong>Pelletier, JD, XXX</strong></p>
+<p>Lead Author: <a href="http://jdpellet.github.io/">Jon D Pelletier</a> <a href="http://orcid.org/0000-0002-0702-2646"><img alt="" src="https://orcid.org/sites/default/files/images/orcid_16x16.png" /></a></p>
+<p>Co-Authors: <a href="https://jvanderleeuw">Jacob van der Leeuw</a> <a href="http://orcid.org/0000-0003-0892-9837"><img alt="" src="https://orcid.org/sites/default/files/images/orcid_16x16.png" /></a>,  <a href="https://tyson-swetnam.github.io/">Tyson Lee Swetnam</a> <a href="http://orcid.org/0000-0002-6639-7181"><img alt="" src="https://orcid.org/sites/default/files/images/orcid_16x16.png" /></a></p>
+<h2 id="contents">Contents<a class="headerlink" href="#contents" title="Permanent link">&para;</a></h2>
+<p>The repository is organized (in the attempt) to enable reproducible research as part of the <a href="https://www.go-fair.org/fair-principles/">FAIR data principles</a>.</p>
+<p>You can (re)run these analyses using your own computer, on commercial cloud, or a data science workbench <a href="https://cyverse.org">CyVerse</a> Discovery Environment.</p>
+<h1 id="installation">Installation<a class="headerlink" href="#installation" title="Permanent link">&para;</a></h1>
+<h2 id="dependencies">Dependencies<a class="headerlink" href="#dependencies" title="Permanent link">&para;</a></h2>
+<p><code>rillgen2d</code> is written in <a href="https://en.wikipedia.org/wiki/C_(programming_language)">C</a>, but uses geospatial data input layers, such as <a href="https://www.ogc.org/standards/geotiff">GeoTiff</a>. These require open-source geospatial software packages such as <a href="https://gdal.org/">GDAL</a>, <a href="https://trac.osgeo.org/geos">GEOS</a>, and <a href="https://proj.org/">PROJ</a> to manage their projection information. The Graphic User Inferface (GUI) is written in <a href="https://www.python.org/">Python3</a> using <a href="https://docs.python.org/3/library/tkinter.html">Tkinter</a>.</p>
+<h3 id="prerequisites">Prerequisites<a class="headerlink" href="#prerequisites" title="Permanent link">&para;</a></h3>
+<p>Regardless of Operating System, we suggest you install <a href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a> (recommended) or full <a href="https://www.anaconda.com/products/individual">Anaconda</a> prior to running the scripts below. The Docker option does not require conda installation. </p>
+<p><a href="https://imagemagick.org/script/download.php#windows">ImageMagick</a> -- the ImageMagick package is not available in Windows <code>conda</code> package management, which handles the other dependencies. </p>
+<h3 id="setup-on-windows-10">Setup on Windows 10<a class="headerlink" href="#setup-on-windows-10" title="Permanent link">&para;</a></h3>
+<p>We have tested these options for running the platform on Windows 10.</p>
+<h4 id="cygwin">Cygwin<a class="headerlink" href="#cygwin" title="Permanent link">&para;</a></h4>
+<p><strong>note: requires <code>conda</code> installation</strong></p>
+<p>Install <a href="https://www.cygwin.com/">Cygwin</a> </p>
+<p>Install <a href="https://docs.conda.io/en/latest/miniconda.html">Miniconda</a></p>
+<p>Run the <a href="https://docs.conda.io/en/latest/miniconda.html">Miniconda installer</a> select the Cygwin installation path for the miniconda</p>
+<div class="highlight"><pre><span></span><code>C:\cygwin64\home\your_username\miniconda
+</code></pre></div>
+<p>Select the 'add to path' option in the installation step.</p>
+<p>Download the <a href="https://github.com/tyson-swetnam/rillgen2d/archive/refs/tags/0.3.zip">Source Code Windows v0.3 zip</a> and unzip (you can rename the folder to whatever you want, our example below uses <code>rillgen2d-windows</code>). </p>
+<p>Open the Cygwin terminal, change directory to the <code>rillgen2d</code> installation folder.</p>
+<div class="highlight"><pre><span></span><code>cd rillgen2d-windows
+</code></pre></div>
+<h5 id="set-up-the-conda-environment">Set up the conda environment<a class="headerlink" href="#set-up-the-conda-environment" title="Permanent link">&para;</a></h5>
+<p>run <code>conda</code> using the <code>environment_windows.yml</code> instead of <code>_linux.yml</code> file:</p>
+<div class="highlight"><pre><span></span><code># create environment for rillgen2d
+conda env create -f environment_windows.yml
+
+# activate conda environment
+conda activate rillgen2d
+</code></pre></div>
+<p>If <code>conda</code> has errors, you may need to add it to the PATH, or set up the <code>~/.bashrc</code> and <code>~/bash_profile</code> for your user in Cygwin</p>
+<h5 id="run-the-rillgen2d-gui">Run the Rillgen2d GUI<a class="headerlink" href="#run-the-rillgen2d-gui" title="Permanent link">&para;</a></h5>
+<p>Once the Python environment has been created and activated, you can start the GUI from the Terminal or Command Prompt:</p>
+<div class="highlight"><pre><span></span><code>python3 rillgen2d.py
+</code></pre></div>
+<h4 id="run-with-docker-desktop-windows">Run with Docker Desktop (Windows)<a class="headerlink" href="#run-with-docker-desktop-windows" title="Permanent link">&para;</a></h4>
+<p>Install the <a href="https://docs.microsoft.com/en-us/windows/wsl/install-win10">Windows Subsystem for Linux (WSL) v2.0</a> installation with the <a href="https://ubuntu.com/wsl">Ubuntu flavor</a> and enable it.</p>
+<p>Install <a href="https://hub.docker.com/editions/community/docker-ce-desktop-windows">Docker Desktop for Windows</a></p>
+<p><strong>note: does not require conda installation</strong></p>
+<p>Download the image from <a href="https://hub.docker.com/u/tswetnam/rillgen2d">DockerHub</a> <code>tswetnam/rillgen2d:latest</code> tag</p>
+<p>The image is very large - because it contains an entire remote desktop in addition to miniconda and the rillgen2d conda environment (geospatial packages). </p>
+<p>Run the image and open the Optional Settings and select Local Host Port - the container runs port <code>9876</code> but you can select any port you choose.</p>
+<p>Select a Host Path - this is necessary to ensure that the data you input and output from Rillgen will be saved back to your host. </p>
+<p>Select a Container Path - the host folder will be renamed inside the container; suggest loading into the <code>/home/user/workspace</code> folder name. When you run rillgen, you can look for that <code>workspace</code> folder.</p>
+<p>Open in Browser - select the open in browser option once the container is running. The remote desktop can also be found at <code>localhost:&lt;port&gt;</code> that you defined in the Host Port setting.</p>
+<h4 id="run-from-windows-subsystem-for-linux">Run from Windows Subsystem for Linux<a class="headerlink" href="#run-from-windows-subsystem-for-linux" title="Permanent link">&para;</a></h4>
+<p>TBA</p>
+<h4 id="install-for-linux-and-mac-os-x">Install for Linux and Mac OS X<a class="headerlink" href="#install-for-linux-and-mac-os-x" title="Permanent link">&para;</a></h4>
+<p>We have provided two <code>environment.yml</code> files which can be used with <a href="https://docs.conda.io/en/latest/">Conda</a> to install the stack on Linux and Mac OS X, or Windows10.</p>
+<p>Make sure to add <code>conda</code> to your PATH environmental variables.</p>
+<p>Open a Terminal:</p>
+<div class="highlight"><pre><span></span><code># create environment for rillgen2d
+conda env create -f environment_linux.yml
+
+# activate conda environment
+conda activate rillgen2d
+</code></pre></div>
+<p>If you have an older installation of <code>conda</code> you may need to update</p>
+<div class="highlight"><pre><span></span><code># update conda
+conda update -n base -c defaults conda
+
+# update conda existing environment 
+conda env update --prefix ./env --file environment_linux.yml  --prune
+
+# or remove old rillgen2d environment
+conda remove --name rillgen2d --all
+</code></pre></div>
+<p>Once the appropriate Python environment has been created, you can start the GUI from the Terminal or Command Prompt:</p>
+<div class="highlight"><pre><span></span><code>python3 rillgen2d.py
+</code></pre></div>
+<h4 id="download-source-code">Download Source Code<a class="headerlink" href="#download-source-code" title="Permanent link">&para;</a></h4>
+<p>The RillGen2D uses a combination of opensource python libraries for visualization in the Graphic User Interface (GUI). To install these tools we recommend that you use the <code>conda</code> environment and package manager. </p>
+<p>First, download the latest <code>.zip</code> or <code>.tar.gz</code> from our <a href="https://github.com/tyson-swetnam/rillgen2d/releases">Releases</a></p>
+<p><a href="https://github.com/tyson-swetnam/rillgen2d/archive/refs/tags/0.3.zip">Source Code Windows v0.3 zip</a></p>
+<p><a href="https://github.com/tyson-swetnam/rillgen2d/archive/refs/tags/0.2.zip">Source Code Linux/MaOSX v0.2 zip</a></p>
+<p><a href="https://github.com/tyson-swetnam/rillgen2d/archive/refs/tags/0.2.tar.gz">Source Code Linux/MacOSX v0.2 tar.gz</a></p>
+<p>Next, unpack the Zip or Tar file and put them somewhere you can find them from the command prompt or terminal. </p>
+<p>If you want to pull from source, clone this repository to your local computer:</p>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/jdpellet/rillgen2d
+cd rillgen2d
+</code></pre></div>
+<p>The <code>main</code> branch has the latest features. The <code>develop</code> branch is where testing is taking place. </p>
+<h2 id="debugging">Debugging<a class="headerlink" href="#debugging" title="Permanent link">&para;</a></h2>
+<div class="highlight"><pre><span></span><code># check your python version (should be +3.7.*)
+python3 --version
+</code></pre></div>
+<p>If <code>conda</code> has errors, you may need to add it to the PATH, or set up the <code>~/.bashrc</code> and <code>~/bash_profile</code> for your user in Cygwin</p>
+<p>Set the <code>conda</code> path to wherever you installed it - in linux, this is typically in <code>/opt</code> in Windows it may be in <code>C:/cygwin64/miniconda/</code></p>
+<div class="highlight"><pre><span></span><code>echo &quot;. /opt/conda/etc/profile.d/conda.sh&quot; &gt;&gt; ~/.bashrc
+echo &quot;conda activate base&quot; &gt;&gt; ~/.bashrc
+source ~/.bashrc
+</code></pre></div>
+<p>We provide an example <code>bash_profile</code> in the <code>/test</code> sub-folder in this repository.</p>
+<p>If you have an older installation of <code>conda</code> you may need to update</p>
+<div class="highlight"><pre><span></span><code># update conda
+conda update -n base -c defaults conda
+
+# update conda existing environment 
+conda env update --prefix ./env --file environment_linux.yml  --prune
+
+# or remove old rillgen2d environment
+conda remove --name rillgen2d --all
+</code></pre></div>
+<p><strong>Note: In Linux the Parameters tab number values may appear with a newline character <code>\n</code> at the end of their boxes, leave these present and update the values as needed.</strong></p>
+<h3 id="building-a-docker-container">Building a Docker container<a class="headerlink" href="#building-a-docker-container" title="Permanent link">&para;</a></h3>
+<div class="highlight"><pre><span></span><code>git clone https://github.com/jdpellet/rillgen2d
+cd rillgen2d
+docker build -t rillgen2d .
+</code></pre></div>
+<h3 id="docker-run-commands">Docker run commands:<a class="headerlink" href="#docker-run-commands" title="Permanent link">&para;</a></h3>
+<p>On Linux:</p>
+<p>use the volume flag to mount a folder with input data: <code>-e DISPLAY -v /home/&lt;username/&lt;data-folder&gt;/:/inputs</code> </p>
+<div class="highlight"><pre><span></span><code># Install X11 server utils
+sudo apt-get install x11-xserver-utils
+# set display
+export DISPLAY=:0
+# allow X11
+xhost +
+# Run docker with host display settings and data volume
+docker run -it --rm -v /home/tswetnam/Downloads/:/inputs -v /tmp/.X11-unix:/tmp/.X11-unix -e DISPLAY=unix$DISPLAY rillgen2d:latest
+</code></pre></div>
+                
+              
+              
+                
+
+
+              
+            </article>
+          </div>
+        </div>
+        
+      </main>
+      
+        
+<footer class="md-footer">
+  
+    <nav class="md-footer__inner md-grid" aria-label="Footer">
+      
+      
+        
+        <a href="data/" class="md-footer__link md-footer__link--next" aria-label="Next: Data" rel="next">
+          <div class="md-footer__title">
+            <div class="md-ellipsis">
+              <span class="md-footer__direction">
+                Next
+              </span>
+              Data
+            </div>
+          </div>
+          <div class="md-footer__button md-icon">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M4 11v2h12l-5.5 5.5 1.42 1.42L19.84 12l-7.92-7.92L10.5 5.5 16 11H4z"/></svg>
+          </div>
+        </a>
+      
+    </nav>
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-footer-copyright">
+        
+          <div class="md-footer-copyright__highlight">
+            Copyright &copy; 2021 - 2022 Jon D Pelletier
+          </div>
+        
+        Made with
+        <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+          Material for MkDocs
+        </a>
+        
+      </div>
+      
+  <div class="md-footer-social">
+    
+      
+      
+        
+        
+      
+      <a href="https://github.com/jdpellet" target="_blank" rel="noopener" title="github.com" class="md-footer-social__link">
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 496 512"><path d="M165.9 397.4c0 2-2.3 3.6-5.2 3.6-3.3.3-5.6-1.3-5.6-3.6 0-2 2.3-3.6 5.2-3.6 3-.3 5.6 1.3 5.6 3.6zm-31.1-4.5c-.7 2 1.3 4.3 4.3 4.9 2.6 1 5.6 0 6.2-2s-1.3-4.3-4.3-5.2c-2.6-.7-5.5.3-6.2 2.3zm44.2-1.7c-2.9.7-4.9 2.6-4.6 4.9.3 2 2.9 3.3 5.9 2.6 2.9-.7 4.9-2.6 4.6-4.6-.3-1.9-3-3.2-5.9-2.9zM244.8 8C106.1 8 0 113.3 0 252c0 110.9 69.8 205.8 169.5 239.2 12.8 2.3 17.3-5.6 17.3-12.1 0-6.2-.3-40.4-.3-61.4 0 0-70 15-84.7-29.8 0 0-11.4-29.1-27.8-36.6 0 0-22.9-15.7 1.6-15.4 0 0 24.9 2 38.6 25.8 21.9 38.6 58.6 27.5 72.9 20.9 2.3-16 8.8-27.1 16-33.7-55.9-6.2-112.3-14.3-112.3-110.5 0-27.5 7.6-41.3 23.6-58.9-2.6-6.5-11.1-33.3 2.6-67.9 20.9-6.5 69 27 69 27 20-5.6 41.5-8.5 62.8-8.5s42.8 2.9 62.8 8.5c0 0 48.1-33.6 69-27 13.7 34.7 5.2 61.4 2.6 67.9 16 17.7 25.8 31.5 25.8 58.9 0 96.5-58.9 104.2-114.8 110.5 9.2 7.9 17 22.9 17 46.4 0 33.7-.3 75.4-.3 83.6 0 6.5 4.6 14.4 17.3 12.1C428.2 457.8 496 362.9 496 252 496 113.3 383.5 8 244.8 8zM97.2 352.9c-1.3 1-1 3.3.7 5.2 1.6 1.6 3.9 2.3 5.2 1 1.3-1 1-3.3-.7-5.2-1.6-1.6-3.9-2.3-5.2-1zm-10.8-8.1c-.7 1.3.3 2.9 2.3 3.9 1.6 1 3.6.7 4.3-.7.7-1.3-.3-2.9-2.3-3.9-2-.6-3.6-.3-4.3.7zm32.4 35.6c-1.6 1.3-1 4.3 1.3 6.2 2.3 2.3 5.2 2.6 6.5 1 1.3-1.3.7-4.3-1.3-6.2-2.2-2.3-5.2-2.6-6.5-1zm-11.4-14.7c-1.6 1-1.6 3.6 0 5.9 1.6 2.3 4.3 3.3 5.6 2.3 1.6-1.3 1.6-3.9 0-6.2-1.4-2.3-4-3.3-5.6-2z"/></svg>
+      </a>
+    
+  </div>
+
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    <script id="__config" type="application/json">{"base": ".", "features": [], "translations": {"clipboard.copy": "Copy to clipboard", "clipboard.copied": "Copied to clipboard", "search.config.lang": "en", "search.config.pipeline": "trimmer, stopWordFilter", "search.config.separator": "[\\s\\-]+", "search.placeholder": "Search", "search.result.placeholder": "Type to start searching", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.term.missing": "Missing", "select.version.title": "Select version"}, "search": "assets/javascripts/workers/search.409db549.min.js", "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.756773cc.min.js"></script>
+      
+    
+  </body>
+</html>
